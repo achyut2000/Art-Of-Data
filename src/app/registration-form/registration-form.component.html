@@ -1,0 +1,73 @@
+
+<form class="register" #registerForm="ngForm">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+            <h3>Welcome to HackDS</h3>
+            <p>You are few seconds away to dive in</p>
+        </div>
+        <div class="com-md-9 register-right">
+                    <h3 class="register-heading">Register to dive in</h3>
+                    <div class="row register-form"> 
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="firstName">FirstName</label>
+                                <input required ngModel name="firstName" #firstName ="ngModel"  id="firstName" type="text" class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">LastName</label>
+                                <input type="text" id="lastName" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="collegeName">College Name</label>
+                                <input required ngModel name="collegeName" id="collegeName" #collegeName="ngModel" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Date Of Birth</label>
+                                <input ngModel id="dob" required name="dob" #dob="ngModel" type="date" max="" class="form-control"/>
+                                 
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="pow">Place Of Work</label>
+                                <input type="text" id="pow" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="schoolName">School Name</label>
+                                <input type="text" id="schoolName" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Interests</label>
+                                <ng-multiselect-dropdown
+                                        name='multiselector'
+                                        [placeholder]="'select max of 4 '"
+                                        [settings]="dropdownSettings"
+                                        [data]="dropdownList"
+                                        [(ngModel)]="selectedItems"
+                                        (onSelect)="onItemSelect($event)"
+                                        (onSelectAll)="onSelectAll($event)"
+                                >
+                                </ng-multiselect-dropdown>
+                            </div>
+                            <div class="form-group">
+                                <span>Are You Loooking For Job???</span>&nbsp;
+                                <div class="maxl">
+                                    <label class="radio inline"> 
+                                        <input type="radio" name="jobchoice" value="yes" checked>
+                                        <span> Yes </span> 
+                                    </label>
+                                    <label class="radio inline"> 
+                                        <input type="radio" name="jobchoice" value="no">
+                                        <span> No </span> 
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" [disabled]="!registerForm.valid">Submit</button>
+                        </div>
+                        
+                    </div>
+                </div>
+    </div>
+</form>

@@ -1,0 +1,77 @@
+.register{
+    background: -webkit-linear-gradient(left,lightseagreen,pink);
+    padding: 2%;
+}
+
+.register .form-group{
+    padding: 1%;
+}
+.input[type="text"]{
+    border-radius: 4%;
+}
+.register-left{
+    text-align: center;
+    color: black;
+    margin-top: 4%;
+}
+.register-left img{
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 25%;
+    -webkit-animation: loader 2s infinite  alternate;
+    animation: loader 1s infinite  alternate;
+}
+@-webkit-keyframes loader {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+@keyframes loader {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+.register-right{
+    width: 65%;
+    margin-top: 0;
+    margin-left: 9%;
+    padding: 1%;
+    background:white;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+}
+.register-left h3{
+    margin-top: 10%;
+    font-weight: bolder;
+    color: darkslategrey;
+}
+.register-left p{
+    font-size: 25px;
+    font-weight: lighter;
+    padding: 2%;
+}
+.register .register-form{
+    padding: 10%;
+    margin-top: 10%;
+}
+.radio{
+    padding: 2%;
+}
+.btn{
+    float: right;
+    margin-top: 10%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: lightseagreen;
+    color: whitesmoke;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+}
+
+.register-heading{
+    text-align: center;
+    margin-top: 13px;
+    margin-bottom: -15%;
+    font-family:Arial, Helvetica, sans-serif;
+    color: gray;
+}
